@@ -1,0 +1,13 @@
+clc;
+clear variables;
+close all;
+I = imread('Exp8 Image1.png');
+G = rgb2gray(I);
+BW1 = edge(G,'Sobel',[]);
+figure, imshow(BW1),title('Sobel detection');
+BW2 = edge(G,'Prewitt',[]);
+BW3 = edge(G,'Roberts',[]);
+BW4 = edge(G,'Canny',[]);
+figure, imshow(BW2),title('Prewitt detection');
+figure, imshow(BW3),title('Roberts detection');
+figure, imshow(BW4),title('Canny detection');

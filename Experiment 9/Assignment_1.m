@@ -1,0 +1,11 @@
+clc;
+clear variables;
+close all;
+I = imread('Exp8 Image1.png');
+G = rgb2gray(I);
+BW1 = edge(G,'Sobel',[],'horizontal');
+BW2 = edge(G,'Sobel',[],'vertical');
+BW3 = edge(G,'Sobel',[],'both');
+figure, imshow(BW1),title('horizontal detection');
+figure, imshow(BW2),title('vertical detection');
+figure, imshow(BW3),title('both');

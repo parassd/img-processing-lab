@@ -1,0 +1,11 @@
+clc;
+clear variables;
+close all;
+I = imread('Exp8 Image1.png');
+%imshow(I);
+G = rgb2gray(I);
+imshow(G);
+Y = im2double(G);
+ x=120; y=200;
+ J = regiongrowing(Y,x,y,0.2); 
+ figure, imshow(Y+J);
